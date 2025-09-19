@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Read Our Blog - StichFlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    #side-menu { transition: transform 0.3s ease; }
+    #side-menu.hidden { transform: translateX(100%); }
+    #side-menu a:hover { color: #6366f1; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 relative">
+
+<!-- Placeholder for menu -->
+<div id="menu-container"></div>
+
+<!-- Hamburger Menu Button -->
+<button id="menu-toggle" class="fixed top-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700">
+  ☰
+</button>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white h-48 flex flex-col justify-center items-center text-center px-6">
+  <h1 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-2">Full Blog Article</h1>
+  <p data-aos="fade-up" data-aos-delay="200" class="text-md md:text-lg max-w-2xl">
+    Deep insights, updates, and stories from the apparel industry.
+  </p>
+</section>
+
+<!-- Article Section -->
+<section class="py-20 container mx-auto px-6">
+  <article class="max-w-4xl mx-auto space-y-6" data-aos="fade-up">
+    <h2 class="text-2xl font-bold">Top Strategies for Apparel Workshops and Retailers</h2>
+    <p class="text-gray-700">
+      In this article, we explore how small and medium apparel workshops can scale efficiently while maintaining high quality.
+      From production workflows to marketing strategies, we cover practical tips for manufacturers and brands alike.
+    </p>
+    <img src="../images/blog-sample.jpg" alt="Apparel Workshop" class="w-full rounded shadow">
+    <p class="text-gray-700">
+      We also share statistics on bulk production trends, sustainability practices, and case studies of successful collaborations between workshops and retailers.
+    </p>
+    <p class="text-gray-700">
+      Engage with our content by commenting, sharing your experiences, and exploring related articles to grow your business knowledge in the B2B apparel space.
+    </p>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6 text-center">
+  © 2025 StichFlow. All rights reserved.
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+
+  // Load dynamic menu
+  fetch('../menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu-container').innerHTML = html;
+      const menuBtn = document.getElementById('menu-toggle');
+      const sideMenu = document.getElementById('side-menu');
+      menuBtn.addEventListener('click', () => sideMenu.classList.toggle('hidden'));
+    });
+</script>
+</body>
+</html>

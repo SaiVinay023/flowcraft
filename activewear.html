@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activewear Manufacturer - StichFlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    #side-menu { transition: transform 0.3s ease; }
+    #side-menu.hidden { transform: translateX(100%); }
+    #side-menu a:hover { color: #6366f1; }
+    .feature-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 relative">
+
+<!-- Placeholder for menu -->
+<div id="menu-container"></div>
+
+<!-- Hamburger Menu Button -->
+<button id="menu-toggle" class="fixed top-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700">
+  ☰
+</button>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white h-64 flex flex-col justify-center items-center text-center px-6">
+  <h1 data-aos="fade-up" class="text-4xl md:text-5xl font-bold mb-4">Activewear Manufacturer</h1>
+  <p data-aos="fade-up" data-aos-delay="200" class="text-lg max-w-2xl mb-6">
+    Premium activewear for fitness brands, bulk orders, and custom designs.
+  </p>
+</section>
+
+<!-- Activewear Features Section -->
+<section class="py-20 container mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Our Activewear Collection</h2>
+  <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up">
+      <h3 class="font-semibold text-lg mb-2">Versatile Apparel</h3>
+      <p class="text-gray-700">Leggings, sports bras, tank tops, hoodies, and performance sets tailored for all fitness activities.</p>
+    </div>
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="font-semibold text-lg mb-2">Performance Fabrics</h3>
+      <p class="text-gray-700">Moisture-wicking, breathable, and durable fabrics ensure comfort during workouts and athletic activities.</p>
+    </div>
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="font-semibold text-lg mb-2">Custom Branding</h3>
+      <p class="text-gray-700">Offer logos, embroidery, and private label options for bulk orders and brand identity.</p>
+    </div>
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="font-semibold text-lg mb-2">Eco-Friendly Manufacturing</h3>
+      <p class="text-gray-700">Sustainable practices and eco-conscious materials are available for responsible brands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6 text-center">
+  © 2025 StichFlow. All rights reserved.
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+
+  // Load menu dynamically
+  fetch('../menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu-container').innerHTML = html;
+      const menuBtn = document.getElementById('menu-toggle');
+      const sideMenu = document.getElementById('side-menu');
+      menuBtn.addEventListener('click', () => sideMenu.classList.toggle('hidden'));
+    });
+</script>
+</body>
+</html>
