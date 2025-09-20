@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StichFlow - B2B Clothing Marketplace</title>
+  <title data-i18n="pageTitle">StichFlow - B2B Clothing Marketplace</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -16,56 +16,86 @@
 </head>
 <body class="font-sans text-gray-800 relative">
 
-<!-- Placeholder for menu -->
-<div id="menu-container"></div>
+<!-- Side Menu -->
+<div id="side-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 hidden z-50 overflow-y-auto">
+  <h2 class="text-2xl font-bold mb-4" data-i18n="menuTitle">Menu</h2>
+  <div class="space-y-4">
+    <h3 class="font-semibold" data-i18n="apparelServices">Apparel Services</h3>
+    <a href="#private-label" data-i18n="privateLabel" class="block">Private Label Clothing Manufacturer</a>
+    <a href="#sustainable" data-i18n="sustainable" class="block">Sustainable Clothing Manufacturer</a>
+    <a href="#cut-sew" data-i18n="cutSew" class="block">Cut and Sew Manufacturer</a>
+    <a href="#small-batch" data-i18n="smallBatch" class="block">Small Batch Clothing Manufacturer</a>
+    <a href="#oem" data-i18n="oem" class="block">OEM Clothing Manufacturer</a>
+    <a href="#embroidery" data-i18n="embroidery" class="block">Embroidery Manufacturer</a>
+    <a href="#eco-packaging" data-i18n="ecoPackaging" class="block">Eco-Friendly Apparel Packaging</a>
 
-<!-- Hamburger Menu Button -->
-<button id="menu-toggle" class="fixed top-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700">
-  ☰
-</button>
+    <h3 class="font-semibold mt-4" data-i18n="production">Production</h3>
+    <a href="#tshirt" data-i18n="tshirt" class="block">T-shirt Manufacturer</a>
+    <a href="#activewear" data-i18n="activewear" class="block">Activewear Manufacturer</a>
+    <a href="#hoodie" data-i18n="hoodie" class="block">Hoodie Manufacturer</a>
+    <a href="#legging" data-i18n="legging" class="block">Legging Manufacturer</a>
+    <a href="#jean" data-i18n="jeans" class="block">Jean Manufacturer</a>
+    <a href="#loungewear" data-i18n="loungewear" class="block">Loungewear Manufacturer</a>
+
+    <h3 class="font-semibold mt-4" data-i18n="aboutMenu">About</h3>
+    <a href="#stories" data-i18n="stories" class="block">Our Stories</a>
+    <a href="#contact" data-i18n="contactMenu" class="block">Get In Touch</a>
+    <a href="#sustainability" data-i18n="sustainabilityMenu" class="block">Sustainability Initiative</a>
+
+    <h3 class="font-semibold mt-4" data-i18n="blogMenu">Blog</h3>
+    <a href="#blog" data-i18n="readBlog" class="block">Read Our Blog</a>
+
+    <h3 class="font-semibold mt-4" data-i18n="languageMenu">Language</h3>
+    <select id="language-select" class="border p-1 rounded w-full">
+      <option value="en">English</option>
+      <option value="nl">Dutch</option>
+      <option value="it">Italian</option>
+    </select>
+  </div>
+</div>
+
+<!-- Hamburger Button -->
+<button id="menu-toggle" class="fixed top-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700">☰</button>
 
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white h-screen flex flex-col justify-center items-center text-center px-6">
-  <h1 data-aos="fade-up" class="text-5xl md:text-6xl font-bold mb-4">StichFlow</h1>
-  <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl max-w-2xl mb-6">
-    The B2B marketplace connecting clothing manufacturers with retailers efficiently and sustainably.
-  </p>
+  <h1 data-i18n="heroTitle" data-aos="fade-up" class="text-5xl md:text-6xl font-bold mb-4">StichFlow</h1>
+  <p data-i18n="heroSubtitle" data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl max-w-2xl mb-6">The B2B marketplace connecting clothing manufacturers with retailers efficiently and sustainably.</p>
   <div data-aos="fade-up" data-aos-delay="400" class="space-x-4">
-    <a href="#signup-manufacturer" class="bg-white text-indigo-600 px-8 py-3 rounded shadow hover:bg-gray-100">Sign Up as Manufacturer</a>
-    <a href="#start-ordering" class="bg-white text-indigo-600 px-8 py-3 rounded shadow hover:bg-gray-100">Start Ordering</a>
+    <a href="#signup-manufacturer" data-i18n="signupBtn" class="bg-white text-indigo-600 px-8 py-3 rounded shadow hover:bg-gray-100">Sign Up as Manufacturer</a>
+    <a href="#start-ordering" data-i18n="startOrderBtn" class="bg-white text-indigo-600 px-8 py-3 rounded shadow hover:bg-gray-100">Start Ordering</a>
   </div>
 </section>
 
 <!-- About Section -->
 <section class="py-20 container mx-auto px-6" id="about">
-  <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Why StichFlow?</h2>
-  <p data-aos="fade-up" data-aos-delay="200" class="max-w-3xl mx-auto text-center text-gray-700 mb-6">
-    We simplify the B2B clothing supply chain, connecting small & medium clothing workshops with retailers and companies who need bulk apparel.  
-    Save time, reduce overhead, and ensure quality & sustainability with every order.
+  <h2 data-i18n="aboutTitle" class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Why StichFlow?</h2>
+  <p data-i18n="aboutText" data-aos="fade-up" data-aos-delay="200" class="max-w-3xl mx-auto text-center text-gray-700 mb-6">
+    We simplify the B2B clothing supply chain, connecting small & medium clothing workshops with retailers and companies who need bulk apparel.
   </p>
 </section>
 
 <!-- How It Works -->
 <section class="py-20 bg-gray-50">
   <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">How It Works</h2>
+    <h2 class="text-4xl font-bold mb-12" data-aos="fade-up" data-i18n="howItWorksTitle">How It Works</h2>
     <div class="grid md:grid-cols-2 gap-12">
       <div data-aos="fade-right">
-        <h3 class="text-2xl font-semibold mb-4">For Manufacturers</h3>
+        <h3 class="text-2xl font-semibold mb-4" data-i18n="manufacturersTitle">For Manufacturers</h3>
         <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>Easy onboarding & profile setup</li>
-          <li>Exposure to verified retailers</li>
-          <li>Order management dashboard</li>
-          <li>Track payments & shipments</li>
+          <li data-i18n="manufacturersList1">Easy onboarding & profile setup</li>
+          <li data-i18n="manufacturersList2">Exposure to verified retailers</li>
+          <li data-i18n="manufacturersList3">Order management dashboard</li>
+          <li data-i18n="manufacturersList4">Track payments & shipments</li>
         </ul>
       </div>
       <div data-aos="fade-left">
-        <h3 class="text-2xl font-semibold mb-4">For Clients / Retailers</h3>
+        <h3 class="text-2xl font-semibold mb-4" data-i18n="clientsTitle">For Clients / Retailers</h3>
         <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>Access verified manufacturers</li>
-          <li>Bulk ordering with customization</li>
-          <li>Track orders and delivery</li>
-          <li>Cost-effective & quality production</li>
+          <li data-i18n="clientsList1">Access verified manufacturers</li>
+          <li data-i18n="clientsList2">Bulk ordering with customization</li>
+          <li data-i18n="clientsList3">Track orders and delivery</li>
+          <li data-i18n="clientsList4">Cost-effective & quality production</li>
         </ul>
       </div>
     </div>
@@ -74,43 +104,98 @@
 
 <!-- Product / Apparel Section -->
 <section class="py-20 container mx-auto px-6" id="products">
-  <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Apparel Products</h2>
+  <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up" data-i18n="productsTitle">Our Apparel Products</h2>
   <div class="grid md:grid-cols-4 gap-8">
-    <!-- Product cards repeated like before -->
+    <!-- T-shirts -->
     <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up">
       <img src="assets/images/tshirt.jpg" alt="T-shirt" class="w-full h-64 object-cover">
       <div class="p-4">
-        <h3 class="font-semibold text-xl mb-2">T-shirts</h3>
-        <p>High-quality, customizable t-shirts for bulk orders.</p>
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productTshirts">T-shirts</h3>
+        <p data-i18n="productTshirtsDesc">High-quality, customizable t-shirts for bulk orders.</p>
       </div>
     </div>
+
+    <!-- Hoodies -->
     <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
       <img src="assets/images/hoodie.jpg" alt="Hoodie" class="w-full h-64 object-cover">
       <div class="p-4">
-        <h3 class="font-semibold text-xl mb-2">Hoodies</h3>
-        <p>Comfortable and stylish hoodies for your brand.</p>
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productHoodies">Hoodies</h3>
+        <p data-i18n="productHoodiesDesc">Comfortable and stylish hoodies for your brand.</p>
       </div>
     </div>
-    <!-- Repeat for pants, shirts, leggings, jeans, loungewear, activewear... -->
+
+    <!-- Pants -->
+    <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+      <img src="assets/images/pants.jpg" alt="Pants" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productPants">Pants</h3>
+        <p data-i18n="productPantsDesc">Durable pants suitable for all types of bulk orders.</p>
+      </div>
+    </div>
+
+    <!-- Shirts -->
+    <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+      <img src="assets/images/shirt.jpg" alt="Shirts" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productShirts">Shirts</h3>
+        <p data-i18n="productShirtsDesc">Premium shirts for casual or formal bulk production.</p>
+      </div>
+    </div>
+
+    <!-- Leggings -->
+    <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+      <img src="assets/images/leggings.jpg" alt="Leggings" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productLeggings">Leggings</h3>
+        <p data-i18n="productLeggingsDesc">Comfortable and stretchy leggings for activewear lines.</p>
+      </div>
+    </div>
+
+    <!-- Jeans -->
+    <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="500">
+      <img src="assets/images/jeans.jpg" alt="Jeans" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productJeans">Jeans</h3>
+        <p data-i18n="productJeansDesc">Classic denim jeans with premium finishing for bulk orders.</p>
+      </div>
+    </div>
+
+    <!-- Loungewear -->
+    <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="600">
+      <img src="assets/images/loungewear.jpg" alt="Loungewear" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productLoungewear">Loungewear</h3>
+        <p data-i18n="productLoungewearDesc">Soft and cozy loungewear sets for your brand.</p>
+      </div>
+    </div>
+
+    <!-- Activewear -->
+    <div class="product-card bg-white rounded shadow overflow-hidden hover:shadow-lg transform hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="700">
+      <img src="assets/images/activewear.jpg" alt="Activewear" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="font-semibold text-xl mb-2" data-i18n="productActivewear">Activewear</h3>
+        <p data-i18n="productActivewearDesc">Trendy, performance-driven activewear for bulk production.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Testimonials -->
 <section class="py-20 bg-gray-100">
   <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">What Our Partners Say</h2>
+    <h2 class="text-4xl font-bold mb-12" data-aos="fade-up" data-i18n="testimonialsTitle">What Our Partners Say</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div data-aos="fade-up">
-        <p>"StichFlow streamlined our bulk orders and helped us find reliable workshops in no time!"</p>
-        <p class="font-semibold mt-2">– Retailer Partner</p>
+        <p data-i18n="testimonial1">"StichFlow streamlined our bulk orders and helped us find reliable workshops in no time!"</p>
+        <p class="font-semibold mt-2" data-i18n="testimonial1Author">– Retailer Partner</p>
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
-        <p>"As a small manufacturer, I gained exposure to new clients easily through StichFlow."</p>
-        <p class="font-semibold mt-2">– Workshop Owner</p>
+        <p data-i18n="testimonial2">"As a small manufacturer, I gained exposure to new clients easily through StichFlow."</p>
+        <p class="font-semibold mt-2" data-i18n="testimonial2Author">– Workshop Owner</p>
       </div>
       <div data-aos="fade-up" data-aos-delay="400">
-        <p>"Fast, reliable, and cost-effective. A must for apparel businesses."</p>
-        <p class="font-semibold mt-2">– Brand Manager</p>
+        <p data-i18n="testimonial3">"Fast, reliable, and cost-effective. A must for apparel businesses."</p>
+        <p class="font-semibold mt-2" data-i18n="testimonial3Author">– Brand Manager</p>
       </div>
     </div>
   </div>
@@ -118,12 +203,13 @@
 
 <!-- Contact / CTA -->
 <section class="py-20 bg-indigo-600 text-center text-white" id="contact">
-  <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="zoom-in">Get in Touch</h2>
-  <p class="max-w-xl mx-auto mb-6" data-aos="zoom-in" data-aos-delay="200">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="zoom-in" data-i18n="contactTitle">Get in Touch</h2>
+  <p class="max-w-xl mx-auto mb-6" data-aos="zoom-in" data-aos-delay="200" data-i18n="contactText">
     Contact us at <a href="mailto:sales@stichflow.com" class="underline">sales@stichflow.com</a> or request a demo.
   </p>
-  <a href="mailto:sales@stichflow.com" class="bg-white text-indigo-600 px-8 py-3 rounded shadow hover:bg-gray-100" data-aos="zoom-in" data-aos-delay="400">Contact Us</a>
+  <a href="mailto:sales@stichflow.com" class="bg-white text-indigo-600 px-8 py-3 rounded shadow hover:bg-gray-100" data-aos="zoom-in" data-aos-delay="400" data-i18n="contactBtn">Contact Us</a>
 </section>
+
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white py-6 text-center">
@@ -137,18 +223,16 @@
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/translations.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
 
-  // Load menu dynamically
-  fetch('menu.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('menu-container').innerHTML = html;
-      const menuBtn = document.getElementById('menu-toggle');
-      const sideMenu = document.getElementById('side-menu');
-      menuBtn.addEventListener('click', () => sideMenu.classList.toggle('hidden'));
-    });
+  // Toggle side menu
+  const menuBtn = document.getElementById('menu-toggle');
+  const sideMenu = document.getElementById('side-menu');
+  menuBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('hidden');
+  });
 </script>
 </body>
 </html>
