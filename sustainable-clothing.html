@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sustainable Clothing Manufacturer - StichFlow</title>
+  <title data-i18n="page_title">Eco-Friendly Apparel Packaging - FlowCraft</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
   <style>
     #side-menu { transition: transform 0.3s ease; }
     #side-menu.hidden { transform: translateX(100%); }
@@ -13,6 +14,15 @@
   </style>
 </head>
 <body class="font-sans text-gray-800 relative">
+
+<!-- Language Selector -->
+<div class="fixed top-4 left-4 z-50">
+  <select id="language-select" class="border px-2 py-1 rounded">
+    <option value="en">English</option>
+    <option value="nl">Nederlands</option>
+    <option value="it">Italiano</option>
+  </select>
+</div>
 
 <!-- Placeholder for menu -->
 <div id="menu-container"></div>
@@ -23,46 +33,59 @@
 </button>
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-green-500 to-green-700 text-white h-64 flex flex-col justify-center items-center text-center px-6">
-  <h1 data-aos="fade-up" class="text-4xl md:text-5xl font-bold mb-4">Sustainable Clothing Manufacturer</h1>
-  <p data-aos="fade-up" data-aos-delay="200" class="text-lg max-w-2xl mb-6">
-    Eco-friendly manufacturing for brands that care about the planet.
+<section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white h-64 flex flex-col justify-center items-center text-center px-6">
+  <h1 data-i18n="hero_title" class="text-4xl md:text-5xl font-bold mb-4">Eco-Friendly Apparel Packaging</h1>
+  <p data-i18n="hero_subtitle" class="text-lg max-w-2xl mb-6">Sustainable packaging options for all your clothing orders.</p>
+</section>
+
+<!-- Commitment Section -->
+<section class="py-20 container mx-auto px-6">
+  <h2 data-i18n="commitment_title" class="text-3xl font-bold mb-6">Our Commitment to Sustainable Clothing Packaging</h2>
+  <p data-i18n="commitment_desc" class="text-gray-700 mb-8">
+    FlowCraft is a sustainably-focused business. We are on course to ensure that 100% of our packaging will be reusable, recyclable, or biodegradable.
   </p>
 </section>
 
-<!-- Sustainable Practices -->
+<!-- Packaging Types -->
+<section class="py-20 bg-gray-50 container mx-auto px-6">
+  <h2 data-i18n="types_title" class="text-3xl font-bold mb-6">Types of Eco-Friendly Packaging We Use</h2>
+  <ul class="list-disc pl-6 space-y-4 text-gray-700">
+    <li><strong data-i18n="hemp">Hemp</strong> - <span data-i18n="hemp_desc">Durable, biodegradable, and sustainable.</span></li>
+    <li><strong data-i18n="pla">PLA (Polylactic Acid)</strong> - <span data-i18n="pla_desc">Bioplastic from renewable sources like corn starch.</span></li>
+    <li><strong data-i18n="cellulose">Cellulose</strong> - <span data-i18n="cellulose_desc">Plant-based, renewable, and compostable.</span></li>
+    <li><strong data-i18n="cardboard">Recycled Cardboard</strong> - <span data-i18n="cardboard_desc">Gives materials a second life and reduces waste.</span></li>
+    <li><strong data-i18n="bubble_wrap">Corrugated Bubble Wrap</strong> - <span data-i18n="bubble_wrap_desc">Compostable protective shipping material.</span></li>
+    <li><strong data-i18n="bio_plastics">Bio-Plastics</strong> - <span data-i18n="bio_plastics_desc">Plant-based plastics that biodegrade fully.</span></li>
+  </ul>
+</section>
+
+<!-- Sustainability Section -->
 <section class="py-20 container mx-auto px-6">
-  <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Our Sustainable Practices</h2>
-  <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-    <div data-aos="fade-up" class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <h3 class="font-semibold text-lg mb-2">Eco-Friendly Materials</h3>
-      <p class="text-gray-700">We use biodegradable fabrics and materials that reduce environmental impact while maintaining quality.</p>
-    </div>
-    <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <h3 class="font-semibold text-lg mb-2">Energy-Efficient Production</h3>
-      <p class="text-gray-700">Our processes are designed to minimize energy consumption and reduce carbon footprint.</p>
-    </div>
-    <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <h3 class="font-semibold text-lg mb-2">Ethical Labor</h3>
-      <p class="text-gray-700">We ensure fair labor practices and full supply chain transparency for all workshops we collaborate with.</p>
-    </div>
-    <div data-aos="fade-up" data-aos-delay="300" class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <h3 class="font-semibold text-lg mb-2">Sustainable Packaging</h3>
-      <p class="text-gray-700">Eco-friendly packaging solutions reduce waste while maintaining a premium unboxing experience.</p>
-    </div>
-  </div>
+  <h2 data-i18n="embrace_title" class="text-3xl font-bold mb-6">Embrace Sustainability with FlowCraft</h2>
+  <p data-i18n="embrace_desc" class="text-gray-700 mb-6">
+    We enable our partners to stay true to eco-conscious values with reusable and recyclable packaging solutions.
+  </p>
+  <button data-i18n="inquire_btn" class="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-700">INQUIRE NOW</button>
+</section>
+
+<!-- Responsible Practices -->
+<section class="py-20 bg-gray-50 container mx-auto px-6">
+  <h2 data-i18n="responsible_title" class="text-3xl font-bold mb-6">We Operate Responsibly at Every Stage</h2>
+  <p data-i18n="responsible_desc" class="text-gray-700">
+    From design to packaging, FlowCraft uses eco-friendly materials, low-impact printing, and recycling practices at every step.
+  </p>
 </section>
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white py-6 text-center">
-  © 2025 StichFlow. All rights reserved.
+  © 2025 FlowCraft. <span data-i18n="rights">All rights reserved.</span>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
 
-  // Load menu dynamically from root
+  // Load menu dynamically
   fetch('../menu.html')
     .then(res => res.text())
     .then(html => {
@@ -71,6 +94,28 @@
       const sideMenu = document.getElementById('side-menu');
       menuBtn.addEventListener('click', () => sideMenu.classList.toggle('hidden'));
     });
+
+  // i18n logic
+  let translations = {};
+  fetch('../i18n/translations.json')
+    .then(res => res.json())
+    .then(data => {
+      translations = data;
+      applyTranslations('en'); // default
+    });
+
+  function applyTranslations(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if(translations[lang] && translations[lang][key]) {
+        el.innerText = translations[lang][key];
+      }
+    });
+  }
+
+  document.getElementById('language-select').addEventListener('change', e => {
+    applyTranslations(e.target.value);
+  });
 </script>
 </body>
 </html>

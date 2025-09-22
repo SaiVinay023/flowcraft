@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hoodie Manufacturer - StichFlow</title>
+  <title data-i18n="page_title">Activewear Manufacturer - StichFlow</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
@@ -11,12 +11,22 @@
     #side-menu { transition: transform 0.3s ease; }
     #side-menu.hidden { transform: translateX(100%); }
     #side-menu a:hover { color: #6366f1; }
+    .feature-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
   </style>
 </head>
 <body class="font-sans text-gray-800 relative">
 
 <!-- Placeholder for menu -->
 <div id="menu-container"></div>
+
+<!-- Language Selector -->
+<div class="fixed top-4 left-4 z-50">
+  <select id="language-select" class="p-2 rounded bg-white border shadow">
+    <option value="en">English</option>
+    <option value="nl">Dutch</option>
+    <option value="it">Italian</option>
+  </select>
+</div>
 
 <!-- Hamburger Menu Button -->
 <button id="menu-toggle" class="fixed top-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700">
@@ -25,27 +35,50 @@
 
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white h-64 flex flex-col justify-center items-center text-center px-6">
-  <h1 data-aos="fade-up" class="text-4xl md:text-5xl font-bold mb-4">Hoodie Manufacturer</h1>
-  <p data-aos="fade-up" data-aos-delay="200" class="text-lg max-w-2xl mb-6">Comfortable, stylish hoodies for all sizes and brands.</p>
+  <h1 data-i18n="hero_title" class="text-4xl md:text-5xl font-bold mb-4">Activewear Manufacturer</h1>
+  <p data-i18n="hero_subtitle" class="text-lg max-w-2xl mb-6">
+    Premium activewear for fitness brands, bulk orders, and custom designs.
+  </p>
 </section>
 
-<!-- Content Section -->
+<!-- Activewear Features Section -->
 <section class="py-20 container mx-auto px-6">
-  <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Hoodie Production</h2>
-  <ul class="list-disc pl-6 space-y-2 text-gray-700" data-aos="fade-up" data-aos-delay="200">
-    <li>Cotton, fleece, and blended fabrics</li>
-    <li>Custom embroidery and print options</li>
-    <li>Bulk production for retail and brands</li>
-    <li>Eco-conscious and ethical manufacturing options</li>
-  </ul>
+  <h2 data-i18n="collection_title" class="text-3xl font-bold mb-10 text-center">Our Activewear Collection</h2>
+  <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up">
+      <h3 data-i18n="feature_1_title" class="font-semibold text-lg mb-2">Versatile Apparel</h3>
+      <p data-i18n="feature_1_text" class="text-gray-700">
+        Leggings, sports bras, tank tops, hoodies, and performance sets tailored for all fitness activities.
+      </p>
+    </div>
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+      <h3 data-i18n="feature_2_title" class="font-semibold text-lg mb-2">Performance Fabrics</h3>
+      <p data-i18n="feature_2_text" class="text-gray-700">
+        Moisture-wicking, breathable, and durable fabrics ensure comfort during workouts and athletic activities.
+      </p>
+    </div>
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+      <h3 data-i18n="feature_3_title" class="font-semibold text-lg mb-2">Custom Branding</h3>
+      <p data-i18n="feature_3_text" class="text-gray-700">
+        Offer logos, embroidery, and private label options for bulk orders and brand identity.
+      </p>
+    </div>
+    <div class="feature-card bg-white p-6 rounded shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+      <h3 data-i18n="feature_4_title" class="font-semibold text-lg mb-2">Eco-Friendly Manufacturing</h3>
+      <p data-i18n="feature_4_text" class="text-gray-700">
+        Sustainable practices and eco-conscious materials are available for responsible brands.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white py-6 text-center">
-  © 2025 StichFlow. All rights reserved.
+  <span data-i18n="footer_text">© 2025 StichFlow. All rights reserved.</span>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../js/translation.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
 
