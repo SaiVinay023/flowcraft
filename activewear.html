@@ -6,7 +6,7 @@
   <title data-i18n="page_title">Activewear Manufacturer - StichFlow</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <style>
     #side-menu { transition: transform 0.3s ease; }
     #side-menu.hidden { transform: translateX(100%); }
@@ -83,7 +83,7 @@
   AOS.init({ duration: 800, once: true });
 
   // Load menu dynamically
-  fetch('../menu.html')
+  fetch('./menu.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('menu-container').innerHTML = html;
